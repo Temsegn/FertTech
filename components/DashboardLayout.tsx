@@ -21,7 +21,7 @@ export default function DashboardLayout({
 
   const handleLogout = () => {
     logout();
-    router.push('/login');
+    router.push('/');
   };
 
   const getRoleLabel = (role: string) => {

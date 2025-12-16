@@ -21,7 +21,12 @@ import {
   FaChartBar,
   FaUserCheck,
   FaHandshake,
-  FaAward
+  FaAward,
+  FaTruck,
+  FaBox,
+  FaUserTie,
+  FaClipboardCheck,
+  FaLeaf
 } from 'react-icons/fa';
 
 export default function Home() {
@@ -53,10 +58,10 @@ export default function Home() {
               <span className="text-2xl font-bold text-gray-900">FertTech</span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors">Features</a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">How It Works</a>
-              <a href="#benefits" className="text-gray-700 hover:text-primary-600 transition-colors">Benefits</a>
-              <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
+              <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors scroll-smooth">Features</a>
+              <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors scroll-smooth">How It Works</a>
+              <a href="#benefits" className="text-gray-700 hover:text-primary-600 transition-colors scroll-smooth">Benefits</a>
+              <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors scroll-smooth">About</a>
             </div>
             <Link
               href="/login"
@@ -210,6 +215,125 @@ export default function Home() {
               <p className="text-gray-600">
                 Designed to scale from pilot regions to national deployment with high-volume support
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fertilizer Distribution Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-primary-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="bg-green-100 p-6 rounded-full">
+                <FaLeaf className="text-5xl text-green-600" />
+              </div>
+            </div>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Fertilizer Distribution for Farmers</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Ensuring every farmer receives their entitled fertilizer through a transparent, secure process
+            </p>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            {/* Distribution Flow */}
+            <div className="grid md:grid-cols-4 gap-4 mb-12">
+              <div className="text-center relative">
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaUserTie className="text-3xl text-primary-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Farmer Registration</h4>
+                  <p className="text-sm text-gray-600">Land size recorded</p>
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-2 z-10">
+                  <FaArrowRight className="text-primary-400 text-xl" />
+                </div>
+              </div>
+              
+              <div className="text-center relative">
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaBox className="text-3xl text-green-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Entitlement Calculated</h4>
+                  <p className="text-sm text-gray-600">Based on land size</p>
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-2 z-10">
+                  <FaArrowRight className="text-primary-400 text-xl" />
+                </div>
+              </div>
+              
+              <div className="text-center relative">
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaQrcode className="text-3xl text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">QR Code Issued</h4>
+                  <p className="text-sm text-gray-600">Secure entitlement card</p>
+                </div>
+                <div className="hidden md:block absolute top-1/2 -right-2 z-10">
+                  <FaArrowRight className="text-primary-400 text-xl" />
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FaTruck className="text-3xl text-yellow-600" />
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">Fertilizer Distributed</h4>
+                  <p className="text-sm text-gray-600">At cooperative</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Distribution Details */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="bg-green-100 p-3 rounded-lg mr-4">
+                    <FaBox className="text-2xl text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Fertilizer Types</h3>
+                    <p className="text-sm text-gray-600">Urea, DAP, NPS</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Multiple fertilizer types distributed based on crop requirements and regional policies
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                    <FaClipboardCheck className="text-2xl text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Fair Distribution</h3>
+                    <p className="text-sm text-gray-600">Based on land size</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Each farmer receives fertilizer proportional to their registered land size, ensuring fairness
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="bg-yellow-100 p-3 rounded-lg mr-4">
+                    <FaWarehouse className="text-2xl text-yellow-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900">Stock Tracking</h3>
+                    <p className="text-sm text-gray-600">Real-time updates</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Digital inventory management ensures accurate stock levels and prevents shortages
+                </p>
+              </div>
             </div>
           </div>
         </div>
