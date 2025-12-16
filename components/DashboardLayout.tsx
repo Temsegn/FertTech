@@ -48,7 +48,7 @@ export default function DashboardLayout({
               <FaSeedling className="text-2xl text-primary-600" />
               <div>
                 <h1 className="text-xl font-semibold text-gray-900">{title}</h1>
-                <p className="text-xs text-gray-500">FertTech</p>
+                <p className="text-xs text-gray-500">GreenLedger</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">

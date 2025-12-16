@@ -1,6 +1,6 @@
-# FertTech - National Farmer Input Distribution System
+# GreenLedger - Fertilizer distribution for Farmer
 
-A Next.js frontend application for FertTech, the Ethiopian Farmer Input Distribution System with mock authentication and role-based access control.
+A Next.js frontend application for GreenLedger, the Ethiopian Fertilizer Distribution System with mock authentication and role-based access control.
 
 ## Features
 
@@ -154,5 +154,5 @@ The system includes pre-configured mock users for testing. All users share the p
 
 ## License
 
-This project is part of the National Farmer Input Distribution System for Ethiopia.
+This project is part of the Fertilizer distribution for Farmer system for Ethiopia.
 

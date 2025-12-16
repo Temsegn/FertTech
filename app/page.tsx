@@ -55,7 +55,7 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <FaSeedling className="text-3xl text-primary-600" />
-              <span className="text-2xl font-bold text-gray-900">FertTech</span>
+              <span className="text-2xl font-bold text-gray-900">GreenLedger</span>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a href="#features" className="text-gray-700 hover:text-primary-600 transition-colors scroll-smooth">Features</a>
@@ -83,12 +83,12 @@ export default function Home() {
                   <FaSeedling className="text-6xl text-primary-600" />
                 </div>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                FertTech
-              </h1>
-              <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-medium">
-                National Farmer Input Distribution System
-              </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+              GreenLedger
+            </h1>
+            <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-medium">
+              Fertilizer distribution for Farmer
+            </p>
               <p className="text-xl text-gray-600 mb-8 max-w-2xl">
                 Fair, Transparent, and Auditable Agricultural Input Delivery for Ethiopia
               </p>
@@ -232,7 +232,7 @@ export default function Home() {
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
                 <img 
-                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&h=300&fit=crop&q=80" 
+                  src=" " 
                   alt="QR code system"
                   className="w-full h-full object-cover rounded-tl-xl"
                   onError={(e) => {
@@ -520,7 +520,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose FertTech?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose GreenLedger?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Built for Ethiopia's agricultural needs with context-appropriate solutions
             </p>
@@ -660,9 +660,9 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">About FertTech</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">About GreenLedger</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                FertTech is Ethiopia's comprehensive solution for fair, transparent, and auditable delivery of agricultural inputs. 
+                GreenLedger is Ethiopia's comprehensive solution for fair, transparent, and auditable delivery of agricultural inputs. 
                 Built around core realities of Ethiopian agriculture, the system ensures that every farmer receives their entitled 
                 inputs through a secure, QR-code-based mechanism.
               </p>
@@ -695,7 +695,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Transform Agricultural Input Distribution?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join thousands of farmers, officers, and cooperatives using FertTech for transparent, fair, and efficient input delivery
+            Join thousands of farmers, officers, and cooperatives using GreenLedger for transparent, fair, and efficient input delivery
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
@@ -722,10 +722,10 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <FaSeedling className="text-2xl text-primary-400" />
-                <span className="text-xl font-bold">FertTech</span>
+                <span className="text-xl font-bold">GreenLedger</span>
               </div>
               <p className="text-gray-400">
-                National Farmer Input Distribution System for Ethiopia
+                Fertilizer distribution for Farmer - Ethiopia
               </p>
             </div>
             <div>
@@ -755,7 +755,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2024 FertTech. All rights reserved.</p>
+            <p>© 2024 GreenLedger. All rights reserved.</p>
             <p className="mt-2 text-sm">Built for Ethiopia's Agricultural Future</p>
           </div>
         </div>
