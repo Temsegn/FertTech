@@ -21,7 +21,8 @@ export default function DashboardLayout({
 
   const handleLogout = () => {
     logout();
-    router.push('/');
+    // Navigate to landing page immediately
+    window.location.href = '/';
   };
 
   const getRoleLabel = (role: string) => {

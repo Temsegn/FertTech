@@ -74,61 +74,127 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-primary-100 py-20">
+      <section className="bg-gradient-to-br from-primary-50 via-white to-primary-100 py-20 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-primary-100 p-4 rounded-full">
-                <FaSeedling className="text-6xl text-primary-600" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <div className="flex justify-center md:justify-start mb-6">
+                <div className="bg-primary-100 p-4 rounded-full">
+                  <FaSeedling className="text-6xl text-primary-600" />
+                </div>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                FertTech
+              </h1>
+              <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-medium">
+                National Farmer Input Distribution System
+              </p>
+              <p className="text-xl text-gray-600 mb-8 max-w-2xl">
+                Fair, Transparent, and Auditable Agricultural Input Delivery for Ethiopia
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/login"
+                  className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                >
+                  Get Started
+                  <FaArrowRight className="inline-block ml-2" />
+                </Link>
+                <a
+                  href="#features"
+                  className="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl border-2 border-primary-600 transform hover:-translate-y-1"
+                >
+                  Learn More
+                </a>
               </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              FertTech
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-medium">
-              National Farmer Input Distribution System
-            </p>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Fair, Transparent, and Auditable Agricultural Input Delivery for Ethiopia
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                href="/login"
-                className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-              >
-                Get Started
-                <FaArrowRight className="inline-block ml-2" />
-              </Link>
-              <a
-                href="#features"
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg hover:shadow-xl border-2 border-primary-600 transform hover:-translate-y-1"
-              >
-                Learn More
-              </a>
+            <div className="hidden md:block">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&h=600&fit=crop&q=80" 
+                  alt="Ethiopian farmers working in fields"
+                  className="w-full h-[500px] object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className="hidden bg-gradient-to-br from-green-400 to-primary-600 w-full h-[500px] flex items-center justify-center">
+                  <FaSeedling className="text-8xl text-white opacity-50" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white py-12 border-b border-gray-200">
+      <section className="bg-white py-12 border-b border-gray-200 relative">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">1.2M+</div>
-              <div className="text-gray-600">Farmers Registered</div>
+            <div className="relative">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1574943320219-553eb2139a09?w=200&h=200&fit=crop&q=80" 
+                  alt="Ethiopian farmer"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="pt-8">
+                <div className="text-4xl font-bold text-primary-600 mb-2">1.2M+</div>
+                <div className="text-gray-600">Farmers Registered</div>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">11</div>
-              <div className="text-gray-600">Regions Covered</div>
+            <div className="relative">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=200&h=200&fit=crop&q=80" 
+                  alt="Ethiopian agricultural region"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="pt-8">
+                <div className="text-4xl font-bold text-primary-600 mb-2">11</div>
+                <div className="text-gray-600">Regions Covered</div>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">84%</div>
-              <div className="text-gray-600">Distribution Rate</div>
+            <div className="relative">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=200&h=200&fit=crop&q=80" 
+                  alt="Farmer receiving inputs"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="pt-8">
+                <div className="text-4xl font-bold text-primary-600 mb-2">84%</div>
+                <div className="text-gray-600">Distribution Rate</div>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">100%</div>
-              <div className="text-gray-600">Transparent</div>
+            <div className="relative">
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=200&h=200&fit=crop&q=80" 
+                  alt="Transparent system"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="pt-8">
+                <div className="text-4xl font-bold text-primary-600 mb-2">100%</div>
+                <div className="text-gray-600">Transparent</div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,21 +210,41 @@ export default function Home() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                <img 
+                  src="https://images.unsplash.com/photo-1574943320219-553eb2139a09?w=300&h=300&fit=crop&q=80" 
+                  alt="Farmer registration"
+                  className="w-full h-full object-cover rounded-tl-xl"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 relative z-10">
                 <FaUsers className="text-3xl text-primary-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Farmer Registration</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-3 relative z-10">Farmer Registration</h3>
+              <p className="text-gray-600 relative z-10">
                 Seasonal registration using existing farmer books without introducing new bureaucracy
               </p>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                <img 
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=300&h=300&fit=crop&q=80" 
+                  alt="QR code system"
+                  className="w-full h-full object-cover rounded-tl-xl"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 relative z-10">
                 <FaQrcode className="text-3xl text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">QR Code System</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-semibold mb-3 relative z-10">QR Code System</h3>
+              <p className="text-gray-600 relative z-10">
                 Secure QR code-based entitlement with anti-forgery protection and one-active-code enforcement
               </p>
             </div>
@@ -239,9 +325,21 @@ export default function Home() {
             {/* Distribution Flow */}
             <div className="grid md:grid-cols-4 gap-4 mb-12">
               <div className="text-center relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaUserTie className="text-3xl text-primary-600" />
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1574943320219-553eb2139a09?w=200&h=200&fit=crop&q=80" 
+                      alt="Farmer registration"
+                      className="w-20 h-20 rounded-full object-cover mx-auto border-4 border-primary-100"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="hidden bg-primary-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                      <FaUserTie className="text-3xl text-primary-600" />
+                    </div>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Farmer Registration</h4>
                   <p className="text-sm text-gray-600">Land size recorded</p>
@@ -252,9 +350,21 @@ export default function Home() {
               </div>
               
               <div className="text-center relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaBox className="text-3xl text-green-600" />
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=200&h=200&fit=crop&q=80" 
+                      alt="Entitlement calculation"
+                      className="w-20 h-20 rounded-full object-cover mx-auto border-4 border-green-100"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="hidden bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                      <FaBox className="text-3xl text-green-600" />
+                    </div>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">Entitlement Calculated</h4>
                   <p className="text-sm text-gray-600">Based on land size</p>
@@ -265,9 +375,21 @@ export default function Home() {
               </div>
               
               <div className="text-center relative">
-                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaQrcode className="text-3xl text-blue-600" />
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
+                  <div className="relative mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=200&h=200&fit=crop&q=80" 
+                      alt="QR code issued"
+                      className="w-20 h-20 rounded-full object-cover mx-auto border-4 border-blue-100"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.nextElementSibling;
+                        if (fallback) fallback.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="hidden bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                      <FaQrcode className="text-3xl text-blue-600" />
+                    </div>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">QR Code Issued</h4>
                   <p className="text-sm text-gray-600">Secure entitlement card</p>
@@ -383,9 +505,21 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-20 bg-gradient-to-br from-primary-50 to-white">
+      <section id="benefits" className="py-20 bg-gradient-to-br from-primary-50 to-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <div className="flex justify-center mb-6">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=400&h=400&fit=crop&q=80" 
+                  alt="Ethiopian farmers community"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            </div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose FertTech?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Built for Ethiopia's agricultural needs with context-appropriate solutions
@@ -508,30 +642,48 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">About FertTech</h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              FertTech is Ethiopia's comprehensive solution for fair, transparent, and auditable delivery of agricultural inputs. 
-              Built around core realities of Ethiopian agriculture, the system ensures that every farmer receives their entitled 
-              inputs through a secure, QR-code-based mechanism.
-            </p>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              The system functions effectively in conditions of illiteracy, offline connectivity, partial stock availability, 
-              and high audit requirements. It leverages existing farmer structures and aligns with cooperative distribution 
-              systems, minimizing resistance while ensuring transparency at every level.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white px-6 py-3 rounded-lg shadow-md">
-                <div className="font-semibold text-gray-900">Pilot-Ready</div>
-                <div className="text-sm text-gray-600">Easy to test in pilot regions</div>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&h=600&fit=crop&q=80" 
+                  alt="Ethiopian farming community"
+                  className="w-full h-[400px] object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className="hidden bg-gradient-to-br from-green-400 to-primary-600 w-full h-[400px] flex items-center justify-center">
+                  <FaSeedling className="text-8xl text-white opacity-50" />
+                </div>
               </div>
-              <div className="bg-white px-6 py-3 rounded-lg shadow-md">
-                <div className="font-semibold text-gray-900">Nationally Scalable</div>
-                <div className="text-sm text-gray-600">Designed for country-wide deployment</div>
-              </div>
-              <div className="bg-white px-6 py-3 rounded-lg shadow-md">
-                <div className="font-semibold text-gray-900">Context-Appropriate</div>
-                <div className="text-sm text-gray-600">Built for Ethiopia's realities</div>
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">About FertTech</h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                FertTech is Ethiopia's comprehensive solution for fair, transparent, and auditable delivery of agricultural inputs. 
+                Built around core realities of Ethiopian agriculture, the system ensures that every farmer receives their entitled 
+                inputs through a secure, QR-code-based mechanism.
+              </p>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                The system functions effectively in conditions of illiteracy, offline connectivity, partial stock availability, 
+                and high audit requirements. It leverages existing farmer structures and aligns with cooperative distribution 
+                systems, minimizing resistance while ensuring transparency at every level.
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <div className="bg-white px-6 py-3 rounded-lg shadow-md">
+                  <div className="font-semibold text-gray-900">Pilot-Ready</div>
+                  <div className="text-sm text-gray-600">Easy to test in pilot regions</div>
+                </div>
+                <div className="bg-white px-6 py-3 rounded-lg shadow-md">
+                  <div className="font-semibold text-gray-900">Nationally Scalable</div>
+                  <div className="text-sm text-gray-600">Designed for country-wide deployment</div>
+                </div>
+                <div className="bg-white px-6 py-3 rounded-lg shadow-md">
+                  <div className="font-semibold text-gray-900">Context-Appropriate</div>
+                  <div className="text-sm text-gray-600">Built for Ethiopia's realities</div>
+                </div>
               </div>
             </div>
           </div>
